@@ -1,11 +1,11 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
-import { Icons } from "react-native-vector-icons/Ionicons";
-import { Home } from "./Home";
-import { Details } from "./Details";
-import { Explore } from "./Explore";
-import { Profile } from "./Profile";
+import Icons from "react-native-vector-icons/Ionicons";
+import Home from "./Home";
+import Details from "./Details";
+import Explore from "./Explore";
+import Profile from "./Profile";
 
 const HomeStack = createStackNavigator();
 const DetailsStack = createStackNavigator();
@@ -79,20 +79,17 @@ const HomeStackScreen = ({ navigation }) => (
     <HomeStack.Screen
       name="Home"
       component={Home}
-      options={
-        {
-          // headerLeft: () => (
-          //   <Icon.Button
-          //     name="ios-menu"
-          //     size={25}
-          //     backgroundColor="#009387"
-          //     onPress={() => {
-          //       navigation.openDrawer();
-          //     }}
-          //   ></Icon.Button>
-          // ),
-        }
-      }
+      options={{
+        title: "Overview",
+        headerLeft: () => (
+          <Icons.Button
+            name="ios-menu"
+            size={25}
+            backgroundColor="#009387"
+            onPress={() => navigation.openDrawer()}
+          ></Icons.Button>
+        ),
+      }}
     />
   </HomeStack.Navigator>
 );
@@ -110,20 +107,16 @@ const DetailsStackScreen = ({ navigation }) => (
     <DetailsStack.Screen
       name="Details"
       component={Details}
-      options={
-        {
-          //headerLeft: () => (
-          // <Icon.Button
-          //   name="ios-menu"
-          //   size={25}
-          //   backgroundColor="#009387"
-          //   onPress={() => {
-          //     navigation.openDrawer();
-          //   }}
-          // ></Icon.Button>
-          //),
-        }
-      }
+      options={{
+        headerLeft: () => (
+          <Icons.Button
+            name="ios-menu"
+            size={25}
+            backgroundColor="#1f65ff"
+            onPress={() => navigation.openDrawer()}
+          ></Icons.Button>
+        ),
+      }}
     />
   </DetailsStack.Navigator>
 );
