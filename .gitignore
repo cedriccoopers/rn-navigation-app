@@ -7,9 +7,11 @@ npm-debug.*
 *.key
 *.mobileprovision
 *.orig.*
-*-lock.json
 web-build/
 web-report/
 
 # macOS
 .DS_Store
+
+# package-lock file since it just causes merge conflicts
+package-lock.json
