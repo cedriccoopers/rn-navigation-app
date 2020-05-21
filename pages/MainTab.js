@@ -112,7 +112,7 @@ const DetailsStackScreen = ({ navigation }) => (
           <Icons.Button
             name="ios-menu"
             size={25}
-            backgroundColor="#1f65ff"
+            backgroundColor="#009387"
             onPress={() => navigation.openDrawer()}
           ></Icons.Button>
         ),
