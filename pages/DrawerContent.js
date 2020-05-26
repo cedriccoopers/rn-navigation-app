@@ -58,35 +58,45 @@ export function DrawerContent(props) {
                 <Icons name="home-outline" color={color} size={size} />
               )}
               label="Home"
-              onPress={() => {}}
+              onPress={() => {
+                props.navigation.navigate("Home");
+              }}
             ></DrawerItem>
             <DrawerItem
               icon={({ color, size }) => (
                 <Icons name="account-outline" color={color} size={size} />
               )}
               label="Profile"
-              onPress={() => {}}
+              onPress={() => {
+                props.navigation.navigate("Profile");
+              }}
             ></DrawerItem>
             <DrawerItem
               icon={({ color, size }) => (
                 <Icons name="bookmark-outline" color={color} size={size} />
               )}
               label="Bookmarks"
-              onPress={() => {}}
+              onPress={() => {
+                props.navigation.navigate("Bookmark");
+              }}
             ></DrawerItem>
             <DrawerItem
               icon={({ color, size }) => (
                 <Icons name="settings-outline" color={color} size={size} />
               )}
               label="Settings"
-              onPress={() => {}}
+              onPress={() => {
+                props.navigation.navigate("Setting");
+              }}
             ></DrawerItem>
             <DrawerItem
               icon={({ color, size }) => (
                 <Icons name="account-check-outline" color={color} size={size} />
               )}
               label="Support"
-              onPress={() => {}}
+              onPress={() => {
+                props.navigation.navigate("Support");
+              }}
             ></DrawerItem>
           </Drawer.Section>
           <Drawer.Section title="Preferences">
